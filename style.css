@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+:root{
+--Very-Dark-Magenta: hsl(300, 43%, 22%);
+--Soft-Pink: hsl(333, 80%, 67%);
+--Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+--Light-Grayish-Magenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%);
+
+--ff-League-Spartan: "League Spartan", sans-serif;
+
+--fw-400: 400;
+--fw-500: 500;
+--fw-700:700;
+
+--fs-body: 0.938rem;
+--fs-heading: 2.5rem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--White);
+    font-family: var(--ff-League-Spartan);
+    background-image: url(images/bg-pattern-top-mobile.svg);
+    background-image: url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+    width: 15 rem;
+    margin: auto;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+/*RAITINGS*/
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-700);
+    color: var(--Very-Dark-Magenta);
+    max-width: 15ch;
+    text-align: center;
+}
+
+.text > p{
+    color: var(--Dark-Grayish-Magenta);
+    font-weight: var(--fw-500);
+    max-width: 20rem;
+}
+
+.rating{
+    font-weight: var(--fw-700);
+}
+.reviews, .report, .best-tech{
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: .5rem;
+    padding: 1em;
+    margin: .75em 0;
+    color: var(--Very-Dark-Magenta);
+    max-width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*COMMENTBOX*/
+.commentbox{
+    background-color: var(--Very-Dark-Magenta);
+    color: var(--White);
+    border-radius: .6rem;
+    margin: 1rem;
+    padding: 1rem;
+    width: 20rem;
+}
+
+.person{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.profile-pic{
+    width: 2.5rem;
+    border-radius: 50%;
+    margin: 0 .5rem;
+}
+
+.name{
+    font-weight: var(--fw-500);
+}
+
+.class{
+    color: var(--Soft-Pink);
+    font-size: 0.7rem;
+    text-align: left;
+}
+
+.comment{
+    text-align: start;
+}
+
+footer{
+    margin-top: 100%;
+}
+
+/*MEDIA QUERYS*/
+
+@media (min-width: 900px) {
+    body{
+        background-image: url(images/bg-pattern-bottom-desktop.svg);
+        background-image: url(images/bg-pattern-top-desktop.svg);
+    }
+
+    main{
+        max-width: 60rem;
+    }
+
+    section{
+        display: flex;
+        margin-top: 2rem;
+    }
+
+    .text{
+        width: 50%;
+        align-items: start;
+
+    }
+
+    h1{
+        text-align: left;
+    }
+
+    .text > p{
+        max-width: 20rem;
+        text-align: left;
+    }
+
+    .ratings{
+        width: 50%;
+        padding-top: 2rem;
+    }
+    
+    .reviews, .report, .best-tech{
+        display: flex;
+        padding: .5em;
+    }
+
+    .reviews{
+        margin-left: 0;
+    }
+
+    .best-tech{
+        margin-right: 0;
+    }
+
+    .rating{
+        margin-left: 1em;
+    }
+
+    .comments > *:nth-child(2){
+        margin-top: 2rem;
+    }
+
+    .comments > *:nth-child(3){
+        margin-top: 3rem;
+    }
+
+    .comments{
+        flex-direction: row;
+    }
+}
